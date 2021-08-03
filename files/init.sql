@@ -1,0 +1,5 @@
+DELETE FROM mysql.user WHERE User = 'walks_db';FLUSH PRIVILEGES;
+CREATE USER 'walks_db'@'%' IDENTIFIED BY 'secret'; GRANT ALL PRIVILEGES ON * . * TO 'walks_db'@'%'; FLUSH PRIVILEGES;
+DROP DATABASE IF EXISTS woi_prod;
+CREATE DATABASE woi_prod;
+
